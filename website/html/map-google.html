@@ -30,6 +30,29 @@
     integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
     crossorigin=""></script>
     <link href="css/colors/blue.css" id="theme" rel="stylesheet">
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/6.4.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.4.0/firebase-firestore.js"></script>
+    
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#config-web-app -->
+
+    <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+        apiKey: "AIzaSyDTGCh2DIxLDrvZCAUyVdps3SEKKm7h2pw",
+        authDomain: "missing-1565944907373.firebaseapp.com",
+        databaseURL: "https://missing-1565944907373.firebaseio.com",
+        projectId: "missing-1565944907373",
+        storageBucket: "",
+        messagingSenderId: "912349228258",
+        appId: "1:912349228258:web:d45bac3ffb451ded"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    var db = firebase.firestore();
+    </script>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" />
     <link rel="stylesheet" href="leaflet-routing-machine.css" />
     <style>
