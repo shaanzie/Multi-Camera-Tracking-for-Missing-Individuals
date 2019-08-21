@@ -30,40 +30,5 @@ def tagimage():
     json_data={"label":label, "ip":ip, "location": location, "filepath":filepath}
     r=requests.post("http://localhost:5000/api/v1/imageproc",data)
     return flask.Response(status=200)
-#1
-# @app.route('/api/v1/create',methods= ['POST'])
-# def createContract():
-#     ''' creates vote contract '''
-#     global voteData
-#     cid=flask.request.json['candidateid']
-#     voteData=cid
-#     cid=cid.split()
-#     cid=''.join(cid)
-#     os.system(r".\\azure-vote\\node_modules\\.bin\\wdio .\\azure-vote\\wdio.conf.js --suite contract "+cid)
-#     return flask.Response(status=200)
-
-# @app.route('/api/v1/verify',methods=['GET'])
-# def takeaction():
-#     ''' does verification '''
-#     #profile values send as cli arguments
-#     trace=os.popen("python hashing.py").read()
-#     ver=os.system(r".\\azure-vote\\node_modules\\.bin\\wdio .\\azure-vote\\wdio.conf.js --suite verify "+trace)
-#     if ver!=0:
-#         return flask.Response(status=401)
-#     else:
-#         s = smtplib.SMTP('smtp.gmail.com', 587) 
-#         s.starttls() 
-#         s.login("anandlagwankerm", "Animesh@Ishaan@Tejvi1234") 
-#         message = "Voted for "+voteData
-#         s.sendmail("anandlagwankerm@gmail.com", "anandlagwankerm@gmail.com", message) 
-#         s.quit() 
-#         return flask.Response(status=200)
-
-# @app.route('/api/v1/action',methods=['GET'])
-# def verify():
-#     ''' verfies whether the vote is valid '''
-#     os.system(r".\\azure-vote\\node_modules\\.bin\\wdio .\\azure-vote\\wdio.conf.js --suite action "+ voteData)
-#     return flask.Response(status=200)
-
 if __name__ == '__main__':
-	app.run(host='0.0.0.0',port=5000)
+	app.run(host='0.0.0.0',port=8000)
