@@ -1,0 +1,18 @@
+{
+    "Cluser1":{
+        "label":"NorthEast",
+        "ip":"localhost",
+        "cameras":{
+            "cm1":["./cameras/videos"],
+            "cm2":["./cameras/videos"]
+        }
+    },
+    "Cluser2":{
+    "label":"SouthEast",
+    "ip":"localhost",
+    "cameras":{
+        "cm1":["./cameras/videos"],
+        "cm2":["./cameras/videos"]
+    }
+}
+}
